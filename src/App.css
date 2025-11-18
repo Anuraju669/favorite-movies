@@ -1,0 +1,122 @@
+/* src/styles.css */
+
+/* --- ROOT ELEMENT ADJUSTMENTS (from previous update) --- */
+
+html, body, #root { 
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+    background-color: #f4f7f6; 
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column; 
+}
+
+/* --- EXISTING STYLES (General) --- */
+
+.header {
+    background-color: #00796b; 
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 2.8em;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+h2 {
+    font-size: 2em;
+    color: #004d40; 
+    border-bottom: 2px solid #b2dfdb;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: #00796b;
+    margin-top: 0; /* Adjust margin for card layout */
+}
+
+section {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+    flex-grow: 1; 
+}
+
+/* --- CARD-SPECIFIC STYLING --- */
+
+.movie-entry {
+    background-color: white;
+    margin-bottom: 25px; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* More prominent shadow for card effect */
+    display: flex; /* Use flexbox for image and content side-by-side */
+    flex-direction: column; /* Default to column on smaller screens */
+    overflow: hidden; /* Ensures image corners are rounded with the card */
+    border: 1px solid #e0e0e0; /* Subtle border */
+}
+
+.movie-image {
+    width: 100%; /* Image takes full width of card by default */
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+    border-radius: 8px 8px 0 0; /* Top corners rounded with the card */
+}
+
+.movie-content {
+    padding: 20px; /* Padding for the text content */
+    flex-grow: 1; /* Allows content to take up available space */
+}
+
+.movie-entry p {
+    margin: 5px 0;
+}
+
+.movie-entry strong {
+    color: #d84315; 
+}
+
+.love-it {
+    font-style: normal;
+    font-size: 1.05em;
+    padding-top: 10px;
+    border-top: 1px dashed #eee;
+}
+
+/* --- Responsive Adjustments for larger screens --- */
+/* --- Responsive Adjustments for larger screens (REVISED IMAGE WIDTH) --- */
+@media (min-width: 650px) {
+    .movie-entry {
+        flex-direction: row; 
+    }
+
+    .movie-image {
+        /* Increased width for a better visual balance */
+        width: 300px; 
+        height: auto; 
+        border-radius: 4px 0 0 4px; 
+    }
+
+    .movie-content {
+        padding-left: 20px; /* Slightly more padding for better separation */
+        padding-right: 20px;
+        border-left: none; 
+    }
+
+}
